@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>common page</title>
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js" type="text/javascript"></script>
+</head>
+<body>
+    success common page！！！
+    <button onclick="getAllUsers();">获取所有用户</button>
+</body>
+<script>
+    function getAllUsers() {
+        $.ajax({
+            url : "/user/getAllUsers",
+            type : "GET",
+            dataType : "JSON",
+            success : function (data) {
+                console.log(data);
+                if(data.code==0){
+                    console.log(data.code);
+                }else{
+                    alert(data.msg);
+                }
+            }
+        });
+    }
+
+</script>
+
+</html>
