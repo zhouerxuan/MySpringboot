@@ -13,7 +13,7 @@ import javax.annotation.Resource;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class redisTest {
+public class RedisTest {
     @Autowired
     private RedisUtil redisUtil;
     @Test
